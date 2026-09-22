@@ -1,0 +1,96 @@
+{
+  "step": 46,
+  "name": "Exact Feature Schema and Production Model Registry Validation",
+  "timestamp": "2026-09-22T07:21:26.299207",
+  "status": "HEALTHY",
+  "dataset_shape": [
+    10000,
+    30
+  ],
+  "instructor_schema": {
+    "status": "EXACT_MATCH",
+    "model_feature_count": 10,
+    "serving_feature_count": 10,
+    "missing_from_serving": [],
+    "extra_in_serving": [],
+    "order_match": true,
+    "model_features": [
+      "amount",
+      "age",
+      "yearsofexperience",
+      "teacher_enrollment_count",
+      "instructor_performance_score",
+      "courseprice",
+      "courseduration",
+      "courserating",
+      "course_enrollment_count",
+      "course_quality_score"
+    ],
+    "serving_features": [
+      "amount",
+      "age",
+      "yearsofexperience",
+      "teacher_enrollment_count",
+      "instructor_performance_score",
+      "courseprice",
+      "courseduration",
+      "courserating",
+      "course_enrollment_count",
+      "course_quality_score"
+    ]
+  },
+  "course_schema": {
+    "status": "EXACT_MATCH",
+    "model_feature_count": 10,
+    "serving_feature_count": 10,
+    "missing_from_serving": [],
+    "extra_in_serving": [],
+    "order_match": true,
+    "model_features": [
+      "amount",
+      "age",
+      "yearsofexperience",
+      "teacherrating",
+      "teacher_enrollment_count",
+      "instructor_performance_score",
+      "courseprice",
+      "courseduration",
+      "course_enrollment_count",
+      "course_quality_score"
+    ],
+    "serving_features": [
+      "amount",
+      "age",
+      "yearsofexperience",
+      "teacherrating",
+      "teacher_enrollment_count",
+      "instructor_performance_score",
+      "courseprice",
+      "courseduration",
+      "course_enrollment_count",
+      "course_quality_score"
+    ]
+  },
+  "instructor_smoke_test": {
+    "status": "PASSED",
+    "model": "/content/edupro_ml_system/models/instructor/ExtraTrees.pkl",
+    "feature_count": 10,
+    "prediction": 3.264159999999993,
+    "error": null
+  },
+  "course_smoke_test": {
+    "status": "PASSED",
+    "model": "/content/edupro_ml_system/models/course/Course_RandomForest.pkl",
+    "feature_count": 10,
+    "prediction": 3.136399999999994,
+    "error": null
+  },
+  "failed_checks": 0,
+  "warning_checks": 0,
+  "exact_schema_files": [
+    "/content/edupro_ml_system/serving/instructor_exact_serving_schema.json",
+    "/content/edupro_ml_system/serving/course_exact_serving_schema.json"
+  ],
+  "registry": "/content/edupro_ml_system/model_registry/exact_model_serving_registry.json",
+  "validation_csv": "/content/edupro_ml_system/reports/step46_exact_schema_validation.csv"
+}

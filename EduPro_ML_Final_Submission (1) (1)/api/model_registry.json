@@ -1,0 +1,44 @@
+{
+    "instructor": {
+        "model_name": "instructor",
+        "path": "/content/edupro_ml_system/models/ensemble/best_instructor_ensemble_model.pkl",
+        "available": false,
+        "type": "pickle"
+    },
+    "course": {
+        "model_name": "course",
+        "path": "/content/edupro_ml_system/models/ensemble/best_course_ensemble_model.pkl",
+        "available": false,
+        "type": "pickle"
+    },
+    "instructor_risk": {
+        "model_name": "instructor_risk",
+        "path": "/content/edupro_ml_system/models/risk/instructor_risk_model.pkl",
+        "available": false,
+        "type": "pickle"
+    },
+    "course_risk": {
+        "model_name": "course_risk",
+        "path": "/content/edupro_ml_system/models/risk/course_risk_model.pkl",
+        "available": false,
+        "type": "pickle"
+    },
+    "instructor_cluster": {
+        "model_name": "instructor_cluster",
+        "path": "/content/edupro_ml_system/models/clustering/instructor_kmeans.pkl",
+        "available": true,
+        "type": "pickle"
+    },
+    "course_cluster": {
+        "model_name": "course_cluster",
+        "path": "/content/edupro_ml_system/models/clustering/course_kmeans.pkl",
+        "available": true,
+        "type": "pickle"
+    },
+    "instructor_anomaly": {
+        "model_name": "instructor_anomaly",
+        "path": "/content/edupro_ml_system/models/risk/instructor_isolation_forest.pkl",
+        "available": true,
+        "type": "pickle"
+    }
+}

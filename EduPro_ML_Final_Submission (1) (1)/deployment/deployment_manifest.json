@@ -1,0 +1,52 @@
+{
+  "deployment_id": "edupro-production-001",
+  "created_at": "2026-09-22T07:29:05.767626",
+  "application": "EduPro ML Production API",
+  "step": 49,
+  "api_version": "2.0.0",
+  "deployment_mode": "docker",
+  "automatic_deployment": false,
+  "approval_required": true,
+  "health_check": "/health",
+  "model_status": "/model-status",
+  "prediction_endpoints": [
+    "/predict/instructor",
+    "/predict/course",
+    "/predict/instructor-batch",
+    "/predict/course-batch"
+  ],
+  "registry": {
+    "registry_version": "46.0",
+    "generated_at": "2026-09-22T07:21:26.293006",
+    "models": {
+      "instructor": {
+        "selected_model": "/content/edupro_ml_system/models/instructor/ExtraTrees.pkl",
+        "model_class": "Pipeline",
+        "feature_schema": "/content/edupro_ml_system/serving/instructor_exact_serving_schema.json",
+        "feature_count": 10,
+        "schema_status": "EXACT_MATCH",
+        "smoke_test": {
+          "status": "PASSED",
+          "model": "/content/edupro_ml_system/models/instructor/ExtraTrees.pkl",
+          "feature_count": 10,
+          "prediction": 3.264159999999993,
+          "error": null
+        }
+      },
+      "course": {
+        "selected_model": "/content/edupro_ml_system/models/course/Course_RandomForest.pkl",
+        "model_class": "Pipeline",
+        "feature_schema": "/content/edupro_ml_system/serving/course_exact_serving_schema.json",
+        "feature_count": 10,
+        "schema_status": "EXACT_MATCH",
+        "smoke_test": {
+          "status": "PASSED",
+          "model": "/content/edupro_ml_system/models/course/Course_RandomForest.pkl",
+          "feature_count": 10,
+          "prediction": 3.136399999999994,
+          "error": null
+        }
+      }
+    }
+  }
+}

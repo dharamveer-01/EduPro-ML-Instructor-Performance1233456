@@ -1,0 +1,31 @@
+{
+  "audit": "EduPro ML System Final End-to-End Audit",
+  "timestamp": "2026-09-22T07:30:48.398039",
+  "status": "HEALTHY_WITH_WARNINGS",
+  "health_score": 91.76,
+  "checks": {
+    "total": 85,
+    "passed": 69,
+    "warnings": 15,
+    "failed": 1
+  },
+  "project": {
+    "total_files": 179,
+    "python_files": 11,
+    "python_lines": 2803,
+    "size_mb": 41.78,
+    "model_files": 25,
+    "prediction_files": 8
+  },
+  "syntax": {
+    "passed": 11,
+    "failed": 0,
+    "errors": []
+  },
+  "paths": {
+    "audit_csv": "/content/edupro_ml_system/reports/step50_final_audit.csv",
+    "testing_csv": "/content/edupro_ml_system/testing/step50_final_audit_results.csv",
+    "summary": "/content/edupro_ml_system/reports/step50_project_summary.txt",
+    "syntax_errors": "/content/edupro_ml_system/reports/step50_syntax_errors.json"
+  }
+}

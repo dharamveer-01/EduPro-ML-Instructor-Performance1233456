@@ -1,0 +1,10 @@
+{
+  "project": "EduPro Instructor Performance and Course Quality Evaluation",
+  "generated_at": "2026-09-22T08:02:57.650454",
+  "base_directory": "/content/edupro_ml_system",
+  "total_files": 185,
+  "python_files": 11,
+  "csv_files": 62,
+  "json_files": 54,
+  "model_files": 25
+}

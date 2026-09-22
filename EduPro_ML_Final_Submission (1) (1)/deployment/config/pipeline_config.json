@@ -1,0 +1,22 @@
+{
+    "project": "EduPro Instructor Performance and Course Quality Evaluation",
+    "pipeline_version": "1.0.0",
+    "data_source": "/content/edupro_feature_engineered/master_enriched.csv",
+    "monitoring_directory": "/content/edupro_ml_system/monitoring",
+    "retraining_directory": "/content/edupro_ml_system/retraining",
+    "model_registry": "/content/edupro_ml_system/model_registry/model_registry.json",
+    "pipeline_stages": [
+        "data_validation",
+        "feature_validation",
+        "drift_monitoring",
+        "model_retraining",
+        "champion_challenger",
+        "model_validation",
+        "deployment_package",
+        "audit_logging"
+    ],
+    "minimum_health_score": 75,
+    "automatic_deployment": false,
+    "require_manual_approval": true,
+    "created_at": "2026-09-22T07:11:14.721716"
+}

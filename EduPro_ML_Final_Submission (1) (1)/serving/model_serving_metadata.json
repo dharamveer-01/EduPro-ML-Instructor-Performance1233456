@@ -1,0 +1,38 @@
+{
+    "version": "1.0",
+    "created_by": "EduPro ML System",
+    "instructor": {
+        "model_available": false,
+        "schema_features": [
+            "amount",
+            "age",
+            "yearsofexperience",
+            "teacher_enrollment_count",
+            "instructor_performance_score",
+            "courseprice",
+            "courseduration",
+            "courserating",
+            "course_enrollment_count",
+            "course_quality_score"
+        ],
+        "model_features": [],
+        "feature_count": 0
+    },
+    "course": {
+        "model_available": false,
+        "schema_features": [
+            "amount",
+            "age",
+            "yearsofexperience",
+            "teacherrating",
+            "teacher_enrollment_count",
+            "instructor_performance_score",
+            "courseprice",
+            "courseduration",
+            "course_enrollment_count",
+            "course_quality_score"
+        ],
+        "model_features": [],
+        "feature_count": 0
+    }
+}

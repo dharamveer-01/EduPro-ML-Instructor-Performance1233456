@@ -1,0 +1,9 @@
+{
+    "deployment_package": "EduPro ML Production Candidate",
+    "created_at": "2026-09-22T07:11:14.839568",
+    "pipeline_id": "pipeline_20260922_071114",
+    "models": [],
+    "automatic_deployment": false,
+    "approval_required": true,
+    "status": "NO_MODEL_AVAILABLE"
+}

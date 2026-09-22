@@ -1,0 +1,23 @@
+{
+  "application": "EduPro Instructor Performance ML",
+  "version": "1.0.0",
+  "api": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "health_endpoint": "/health"
+  },
+  "security": {
+    "authentication": "X-API-Key",
+    "api_key_from_environment": true
+  },
+  "models": {
+    "registry": "/app/edupro_ml_system/model_registry/exact_model_serving_registry.json"
+  },
+  "schemas": {
+    "instructor": "/app/edupro_ml_system/serving/instructor_exact_serving_schema.json",
+    "course": "/app/edupro_ml_system/serving/course_exact_serving_schema.json"
+  },
+  "limits": {
+    "maximum_batch_size": 500
+  }
+}

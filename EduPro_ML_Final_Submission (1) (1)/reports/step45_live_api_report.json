@@ -1,0 +1,77 @@
+{
+  "step": 45,
+  "title": "Live FastAPI Server and Streamlit Integration Validation",
+  "api_url": "http://127.0.0.1:8000",
+  "status": "NEEDS ATTENTION",
+  "health_score": 80.0,
+  "tests": [
+    {
+      "test": "GET /health",
+      "status": "PASS",
+      "details": "{\"status\":\"healthy\",\"service\":\"EduPro ML API\",\"models_loaded\":[\"course\",\"instructor\"]}"
+    },
+    {
+      "test": "GET /api-info",
+      "status": "PASS",
+      "details": "{\"name\":\"EduPro ML Production API\",\"version\":\"1.0.0\",\"authentication\":\"X-API-Key\",\"batch_limit\":500,\"endpoints\":[\"/health\",\"/api-info\",\"/model-status\",\"/predict/instructor\",\"/predict/course\",\"/predict/instructor-batch\",\"/predict/course-batch\"]}"
+    },
+    {
+      "test": "Authentication without key",
+      "status": "PASS",
+      "details": "HTTP 401"
+    },
+    {
+      "test": "Invalid API key rejection",
+      "status": "PASS",
+      "details": "HTTP 403"
+    },
+    {
+      "test": "Valid API key",
+      "status": "PASS",
+      "details": "{\"status\":\"ok\",\"models\":{\"course\":{\"loaded\":true,\"path\":\"/content/edupro_ml_system/models/clustering/course_clustering_scaler.pkl\"},\"instructor\":{\"loaded\":true,\"path\":\"/content/edupro_ml_system/models/risk/instructor_isolation_forest.pkl\"}}}"
+    },
+    {
+      "test": "Instructor prediction",
+      "status": "FAIL",
+      "details": "{\"detail\":\"Prediction failed: X has 10 features, but IsolationForest is expecting 11 features as input.\"}"
+    },
+    {
+      "test": "Course prediction",
+      "status": "FAIL",
+      "details": "{\"detail\":\"Prediction failed: 'StandardScaler' object has no attribute 'predict'\"}"
+    },
+    {
+      "test": "Instructor batch prediction",
+      "status": "PASS",
+      "details": "{\"entity\":\"instructor\",\"count\":3,\"results\":[{\"record_index\":0,\"status\":\"failed\",\"error\":\"422: Prediction failed: X has 10 features, but IsolationForest is expecting 11 features as input.\"},{\"record_index\":1,\"status\":\"failed\",\"error\":\"422: Prediction failed: X has 10 features, but IsolationForest is expecting 11 features as input.\"},{\"record_index\":2,\"status\":\"failed\",\"error\":\"422: Prediction failed: X has 10 features, but IsolationForest is expecting 11 features as input.\"}]}"
+    },
+    {
+      "test": "Course batch prediction",
+      "status": "PASS",
+      "details": "{\"entity\":\"course\",\"count\":3,\"results\":[{\"record_index\":0,\"status\":\"failed\",\"error\":\"422: Prediction failed: 'StandardScaler' object has no attribute 'predict'\"},{\"record_index\":1,\"status\":\"failed\",\"error\":\"422: Prediction failed: 'StandardScaler' object has no attribute 'predict'\"},{\"record_index\":2,\"status\":\"failed\",\"error\":\"422: Prediction failed: 'StandardScaler' object has no attribute 'predict'\"}]}"
+    },
+    {
+      "test": "API latency test",
+      "status": "PASS",
+      "details": {
+        "average_ms": 2.2540441997989547,
+        "minimum_ms": 2.152962999389274,
+        "maximum_ms": 2.4682469993422274
+      }
+    }
+  ],
+  "production_flow": [
+    "Streamlit Dashboard",
+    "REST API",
+    "API Key Authentication",
+    "Feature Validation",
+    "ML Model",
+    "Prediction Response"
+  ],
+  "artifacts": [
+    "/content/edupro_ml_system/api/tests/step45_live_api_tests.json",
+    "/content/edupro_ml_system/api/tests/step45_summary.json",
+    "/content/edupro_ml_system/api/logs/live_api.log"
+  ],
+  "timestamp": "2026-09-22T07:19:43.227348+00:00"
+}

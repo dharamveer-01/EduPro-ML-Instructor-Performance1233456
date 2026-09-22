@@ -1,0 +1,27 @@
+INFO:     Started server process [45054]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50092 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50108 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50120 - "GET /api-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50128 - "GET /model-status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50140 - "GET /model-status HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:50156 - "GET /model-status HTTP/1.1" 200 OK
+/usr/local/lib/python3.13/dist-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but IsolationForest was fitted without feature names
+  warnings.warn(
+INFO:     127.0.0.1:50160 - "POST /predict/instructor HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50162 - "POST /predict/course HTTP/1.1" 422 Unprocessable Content
+/usr/local/lib/python3.13/dist-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but IsolationForest was fitted without feature names
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but IsolationForest was fitted without feature names
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but IsolationForest was fitted without feature names
+  warnings.warn(
+INFO:     127.0.0.1:50166 - "POST /predict/instructor-batch HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50174 - "POST /predict/course-batch HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50184 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50194 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50204 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50214 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50218 - "GET /health HTTP/1.1" 200 OK

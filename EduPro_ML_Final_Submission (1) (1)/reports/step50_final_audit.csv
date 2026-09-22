@@ -1,0 +1,86 @@
+Category,Check,Status,Details
+Structure,data,PASS,Directory exists
+Structure,models,PASS,Directory exists
+Structure,models/instructor,PASS,Directory exists
+Structure,models/course,PASS,Directory exists
+Structure,models/risk,PASS,Directory exists
+Structure,models/clustering,PASS,Directory exists
+Structure,features,PASS,Directory exists
+Structure,metrics,PASS,Directory exists
+Structure,predictions,PASS,Directory exists
+Structure,experiments,PASS,Directory exists
+Structure,logs,PASS,Directory exists
+Structure,reports,PASS,Directory exists
+Structure,artifacts,PASS,Directory exists
+Structure,serving,PASS,Directory exists
+Structure,monitoring,PASS,Directory exists
+Structure,retraining,PASS,Directory exists
+Structure,model_versions,FAIL,Directory missing
+Structure,model_registry,PASS,Directory exists
+Structure,mlops_pipeline,PASS,Directory exists
+Structure,deployment,PASS,Directory exists
+Structure,api,PASS,Directory exists
+Structure,integration,PASS,Directory exists
+Data,Master dataset,PASS,10000 rows x 30 columns
+Features,master_enriched.csv,PASS,10000 rows x 30 columns
+Features,teachers_features.csv,PASS,60 rows x 12 columns
+Features,courses_features.csv,PASS,60 rows x 13 columns
+Features,transactions_clean.csv,PASS,10000 rows x 7 columns
+Features,teacher_course_summary.csv,PASS,887 rows x 6 columns
+Models,Serialized ML models,PASS,25 pickle model files found
+Models,Instructor,PASS,5 model files
+Models,Course,PASS,5 model files
+Models,Risk,PASS,7 model files
+Models,Clustering,PASS,6 model files
+Models,Ensemble,WARNING,No .pkl model found
+Models,Retraining,WARNING,No .pkl model found
+Registry,model_registry.json,WARNING,Registry file not found
+Registry,exact_model_serving_registry.json,PASS,Registry exists
+Registry,model_registry.csv,WARNING,Registry file not found
+Registry,Production model registry,PASS,1 registry artifacts found
+Serving,instructor_exact_serving_schema.json,PASS,"Valid JSON, 11 top-level fields"
+Serving,course_exact_serving_schema.json,PASS,"Valid JSON, 11 top-level fields"
+Serving,model_serving_metadata.json,PASS,"Valid JSON, 4 top-level fields"
+Predictions,Prediction artifacts,PASS,8 prediction CSV files
+Predictions,instructor_ensemble_predictions.csv,WARNING,Prediction file missing
+Predictions,course_ensemble_predictions.csv,WARNING,Prediction file missing
+Predictions,instructor_risk_predictions.csv,PASS,12 rows
+Predictions,course_risk_predictions.csv,WARNING,Prediction file missing
+Predictions,instructor_cluster_assignments.csv,PASS,60 rows
+Predictions,course_cluster_assignments.csv,PASS,60 rows
+Predictions,instructor_anomaly_predictions.csv,PASS,60 rows
+XAI,instructor_global_xai_importance.csv,WARNING,XAI artifact missing
+XAI,course_global_xai_importance.csv,WARNING,XAI artifact missing
+XAI,instructor_local_xai_explanations.csv,WARNING,XAI artifact missing
+XAI,course_local_xai_explanations.csv,WARNING,XAI artifact missing
+XAI,instructor_xai_driver_summary.csv,WARNING,XAI artifact missing
+XAI,course_xai_driver_summary.csv,WARNING,XAI artifact missing
+Monitoring,feature_drift_analysis.csv,PASS,Monitoring artifact exists
+Monitoring,prediction_drift_analysis.csv,PASS,Monitoring artifact exists
+Monitoring,drift_summary.csv,PASS,Monitoring artifact exists
+Monitoring,model_performance_monitoring.csv,PASS,Monitoring artifact exists
+Monitoring,monitoring_dashboard_kpis.csv,PASS,Monitoring artifact exists
+Monitoring,monitoring_alerts.csv,PASS,Monitoring artifact exists
+Monitoring,Drift monitoring layer,PASS,6/6 artifacts available
+Retraining,Automatic retraining framework,WARNING,Retraining artifacts not found
+MLOps,mlops_pipeline/config,PASS,Available
+MLOps,mlops_pipeline/scripts,PASS,Available
+MLOps,mlops_pipeline/logs,PASS,Available
+MLOps,mlops_pipeline/reports,PASS,Available
+MLOps,mlops_pipeline/reports/step42_mlops_pipeline_report.json,PASS,Available
+API,production_api.py,PASS,API component exists
+API,production_api_v2.py,PASS,API component exists
+API,exact_model_server.py,PASS,API component exists
+API,api_config.json,PASS,API component exists
+API,requirements.txt,PASS,API component exists
+Dashboard,app.py,WARNING,File missing
+Dashboard,production_dashboard.py,PASS,Dashboard/integration file exists
+Dashboard,api_client.py,PASS,Dashboard/integration file exists
+Dashboard,streamlit_api_integration.py,PASS,Dashboard/integration file exists
+Deployment,Dockerfile,PASS,Deployment artifact exists
+Deployment,docker-compose.yml,PASS,Deployment artifact exists
+Deployment,requirements.txt,PASS,Deployment artifact exists
+Deployment,.env.example,PASS,Deployment artifact exists
+Deployment,deployment_manifest.json,PASS,Deployment artifact exists
+Deployment,DEPLOYMENT_README.md,PASS,Deployment artifact exists
+Code Quality,Python syntax validation,PASS,11 Python files compiled successfully

@@ -1,0 +1,40 @@
+{
+  "schema_version": "46.0",
+  "entity": "instructor",
+  "created_at": "2026-09-22T07:21:25.938576",
+  "model_path": "/content/edupro_ml_system/models/instructor/ExtraTrees.pkl",
+  "model_class": "Pipeline",
+  "entity_id": "teacherid",
+  "target": "teacherrating",
+  "feature_count": 10,
+  "feature_order": [
+    "amount",
+    "age",
+    "yearsofexperience",
+    "teacher_enrollment_count",
+    "instructor_performance_score",
+    "courseprice",
+    "courseduration",
+    "courserating",
+    "course_enrollment_count",
+    "course_quality_score"
+  ],
+  "feature_defaults": {
+    "amount": 63.260432692307695,
+    "age": 36.5,
+    "yearsofexperience": 6.0,
+    "teacher_enrollment_count": 56.5,
+    "instructor_performance_score": 46.22732767069584,
+    "courseprice": 63.260432692307695,
+    "courseduration": 27.80994362611384,
+    "courserating": 3.1768142633228837,
+    "course_enrollment_count": 166.08347826086958,
+    "course_quality_score": 69.77816096562951
+  },
+  "serving_rules": {
+    "missing_numeric": "median",
+    "unknown_numeric": "0",
+    "preserve_feature_order": true,
+    "reject_missing_required_features": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "step": 49,
+  "name": "Production Docker Deployment Package",
+  "timestamp": "2026-09-22T07:29:05.784068",
+  "status": "READY_FOR_DOCKER_BUILD",
+  "required_files": [
+    {
+      "file": "/content/edupro_ml_system/api/production_api_v2.py",
+      "exists": true
+    },
+    {
+      "file": "/content/edupro_ml_system/api/exact_model_server.py",
+      "exists": true
+    },
+    {
+      "file": "/content/edupro_ml_system/serving/instructor_exact_serving_schema.json",
+      "exists": true
+    },
+    {
+      "file": "/content/edupro_ml_system/serving/course_exact_serving_schema.json",
+      "exists": true
+    },
+    {
+      "file": "/content/edupro_ml_system/model_registry/exact_model_serving_registry.json",
+      "exists": true
+    }
+  ],
+  "deployment_files": [
+    {
+      "file": "/content/edupro_ml_system/deployment/docker/Dockerfile",
+      "exists": true,
+      "size_bytes": 838
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/docker/requirements.txt",
+      "exists": true,
+      "size_bytes": 94
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/docker/docker-compose.yml",
+      "exists": true,
+      "size_bytes": 451
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/docker/.env.example",
+      "exists": true,
+      "size_bytes": 140
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/docker/.dockerignore",
+      "exists": true,
+      "size_bytes": 104
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/config/production_config.json",
+      "exists": true,
+      "size_bytes": 604
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/deployment_manifest.json",
+      "exists": true,
+      "size_bytes": 1736
+    },
+    {
+      "file": "/content/edupro_ml_system/deployment/docs/DEPLOYMENT_README.md",
+      "exists": true,
+      "size_bytes": 1015
+    }
+  ],
+  "docker_environment": {
+    "docker_available": false,
+    "docker_version": null,
+    "compose_available": false,
+    "compose_version": null,
+    "docker_error": "[Errno 2] No such file or directory: 'docker'",
+    "compose_error": "[Errno 2] No such file or directory: 'docker'"
+  },
+  "copied_models": [
+    {
+      "entity": "instructor",
+      "source": "/content/edupro_ml_system/models/instructor/ExtraTrees.pkl",
+      "destination": "/content/edupro_ml_system/deployment/models/instructor/ExtraTrees.pkl"
+    },
+    {
+      "entity": "course",
+      "source": "/content/edupro_ml_system/models/course/Course_RandomForest.pkl",
+      "destination": "/content/edupro_ml_system/deployment/models/course/Course_RandomForest.pkl"
+    }
+  ],
+  "artifacts": {
+    "dockerfile": "/content/edupro_ml_system/deployment/docker/Dockerfile",
+    "compose": "/content/edupro_ml_system/deployment/docker/docker-compose.yml",
+    "requirements": "/content/edupro_ml_system/deployment/docker/requirements.txt",
+    "environment": "/content/edupro_ml_system/deployment/docker/.env.example",
+    "configuration": "/content/edupro_ml_system/deployment/config/production_config.json",
+    "manifest": "/content/edupro_ml_system/deployment/deployment_manifest.json",
+    "readme": "/content/edupro_ml_system/deployment/docs/DEPLOYMENT_README.md"
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "features": [
+        "amount",
+        "age",
+        "yearsofexperience",
+        "teacherrating",
+        "teacher_enrollment_count",
+        "instructor_performance_score",
+        "courseprice",
+        "courseduration",
+        "course_enrollment_count",
+        "course_quality_score"
+    ],
+    "medians": {
+        "amount": 0.0,
+        "age": 44.29049453838097,
+        "yearsofexperience": 16.04185393258427,
+        "teacherrating": 4.096993506493506,
+        "teacher_enrollment_count": 1882.1263599042081,
+        "instructor_performance_score": 76.02744121482536,
+        "courseprice": 0.0,
+        "courseduration": 28.505,
+        "course_enrollment_count": 166.0,
+        "course_quality_score": 68.6504081632653
+    },
+    "target": "courserating",
+    "entity_id": "courseid",
+    "rows": 60,
+    "entity_type": "Course",
+    "schema_version": "1.0"
+}

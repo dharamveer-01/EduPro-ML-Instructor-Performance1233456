@@ -1,0 +1,13 @@
+{
+  "application_name": "EduPro ML Production API",
+  "version": "1.0.0",
+  "environment": "production",
+  "authentication": "API_KEY",
+  "header_name": "X-API-Key",
+  "max_batch_size": 500,
+  "request_timeout_seconds": 30,
+  "rate_limit_requests_per_minute": 120,
+  "logging_enabled": true,
+  "input_validation": true,
+  "docs_enabled": true
+}
